@@ -4,7 +4,9 @@
 
 **简体中文** · [English](README.en-US.md)
 
-[主线仓库](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)
+纯前端静态页面 · 无后端 · 插件化扩展
+
+[主线仓库](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) · [插件开发模板](https://github.com/omdsc-dev/dsc-plugin-template) · [同源插件仓库](https://github.com/omdsc-dev/dsc-inner-plugin)
 
 </div>
 
@@ -18,30 +20,37 @@
 |:---:|:---:|
 | 了解主线产品做了什么 | **[主线仓库说明](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.md)** · [English](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.en-US.md) |
 | 获取可用的静态包 | **[主线仓库 Releases](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/releases)** |
-| 未披露 | 未披露 |
+| 开发一个插件 | **[插件开发模板](https://github.com/omdsc-dev/dsc-plugin-template)** |
+| 浏览插件索引与收录范围 | **[社区精选插件合集](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [同源插件索引仓库](https://github.com/omdsc-dev/dsc-inner-plugin) |
+| 反馈问题或申请收录 | **[社区精选插件合集](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [组织仓库](https://github.com/omdsc-dev) |
 
 ## 仓库矩阵
 
 | 仓库 | 能做什么 |
 |:---:|:---:|
 | **[DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)** | 解压即用的社区增强聊天网页,基于官方 deepseek-ai/chat-demo 增强 |
+| **[dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template)** | 插件开发模板,提供示例与起步骨架,帮你快速写出可用的插件 |
+| **[dsc-inner-plugin](https://github.com/omdsc-dev/dsc-inner-plugin)** | 同源插件索引,收录承诺不泄露用户凭证与数据的插件 |
+| **[awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin)** | 社区精选插件合集,收录社区插件并提供索引与收录申请入口 |
 | **[omdsc-dev.github.io](https://github.com/omdsc-dev/omdsc-dev.github.io)** | 组织站点的在线入口,可由此进入主线的在线页面 |
-| 未披露 | 未披露 |
+| **[.github](https://github.com/omdsc-dev/.github)** | 你现在浏览的组织主页,以及权利、署名与免责声明 |
 
 ## 生态与角色
 
 | 角色 | 从哪里进入 | 能得到什么 |
 |:---:|:---:|:---:|
 | 普通用户 | [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) | 了解使用方式与资费前提,取得可直接使用的静态包 |
-| 插件开发者 | 未披露 | 未披露 |
-| 社区贡献者 | 未披露 | 未披露 |
+| 插件开发者 | [dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template) | 模板与示例,从零写出可用的插件 |
+| 社区贡献者 | [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin) | 提交插件收录,让作品被更多用户找到 |
 
 ## 签名与信任
 
 组织用一套证书体系来说明内容的来源。
 
 - **组织维护自己的根证书机构:** 用来认定哪些插件合集是受信任的发布方,并为它们签发证书。
-- 未披露
+- **受信任的合集为收录的插件签名:** 合集用组织签发的证书为收录的插件签名,你从合集拿到的插件因此可以追溯到组织认可的发布方。
+- **插件作者也可以自签名:** 作者用自己的密钥为插件签名,这代表作者本人的承诺,不是组织的认定。
+- **签名只证明来源未被篡改:** 签名说明内容确实来自所声称的发布者,并且发布之后没有被改动;它不证明插件安全、无害或会持续维护,挑选插件时仍请自行核对来源与风险。
 
 ## 组织原则
 
@@ -54,10 +63,10 @@
 ## 参与方式与联系
 
 - 组织仓库列表: [github.com/omdsc-dev](https://github.com/omdsc-dev)
+- 插件收录申请与问题反馈: 在 [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin) 中提交 Issue
 - 主线产品的问题与建议: 在 [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) 中提交 Issue
 - 组织资料与声明: [本仓库](https://github.com/omdsc-dev/.github) · [权利与免责声明](NOTICE.md)
 - 组织 Owner 与联系人: JularDepick (JularDepick@gmail.com)
-- 未披露
 
 ---
 

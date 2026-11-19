@@ -4,7 +4,9 @@
 
 [简体中文](README.md) · **English**
 
-[Main repository](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)
+Pure static front end · No backend · Plugin-based extension
+
+[Main repository](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) · [Plugin template](https://github.com/omdsc-dev/dsc-plugin-template) · [First-party plugin repository](https://github.com/omdsc-dev/dsc-inner-plugin)
 
 </div>
 
@@ -18,30 +20,37 @@ An open-source community organization primarily serving the DeepSeek ecosystem. 
 |:---:|:---:|
 | Understand what the main product does | **[Main repository overview](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.en-US.md)** · [简体中文](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.md) |
 | Get a static package | **[Main repository releases](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/releases)** |
-| Not yet disclosed | Not yet disclosed |
+| Build a plugin | **[Plugin development template](https://github.com/omdsc-dev/dsc-plugin-template)** |
+| Browse the plugin index and listing scope | **[Community plugin collection](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [First-party plugin index repository](https://github.com/omdsc-dev/dsc-inner-plugin) |
+| Report a problem or request listing | **[Community plugin collection](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [Organization](https://github.com/omdsc-dev) |
 
 ## Repository matrix
 
 | Repository | What it does |
 |:---:|:---:|
 | **[DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)** | A community-enhanced chat page that works right after unzipping, built on the official deepseek-ai/chat-demo |
+| **[dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template)** | Plugin development template with a starting skeleton and examples, so you get a working plugin faster |
+| **[dsc-inner-plugin](https://github.com/omdsc-dev/dsc-inner-plugin)** | First-party plugin index, listing plugins that promise not to leak user credentials or data |
+| **[awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin)** | Community plugin collection, gathering community plugins with an index and a listing request entry |
 | **[omdsc-dev.github.io](https://github.com/omdsc-dev/omdsc-dev.github.io)** | Online entry for the organization site, leading to the mainline online page |
-| Not yet disclosed | Not yet disclosed |
+| **[.github](https://github.com/omdsc-dev/.github)** | The organization home page you are reading, together with the rights, attribution and disclaimer notice |
 
 ## Ecosystem and roles
 
 | Role | Where to enter | What you get |
 |:---:|:---:|:---:|
 | Regular user | [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) | Learn how to use it and what it costs, and get a ready-to-use static package |
-| Plugin developer | Not yet disclosed | Not yet disclosed |
-| Community contributor | Not yet disclosed | Not yet disclosed |
+| Plugin developer | [dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template) | Template and examples, so you can write a working plugin from scratch |
+| Community contributor | [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin) | Submit a plugin for listing and let more users find it |
 
 ## Signatures and trust
 
 The organization uses a certificate system to show where content comes from.
 
 - **The organization runs its own root certificate authority:** it decides which plugin collections are trusted publishers and issues certificates to them.
-- Not yet disclosed
+- **Trusted collections sign the plugins they list:** a collection signs its listed plugins with the certificate the organization issued, so a plugin you get from a collection traces back to a publisher the organization recognizes.
+- **Plugin authors can also self-sign:** an author can sign a plugin with their own key, which stands for the author's own commitment rather than the organization's endorsement.
+- **A signature only proves the source was not tampered with:** it shows the content really comes from the publisher it claims and has not changed since publication; it does not prove the plugin is safe, harmless or maintained, so still check the source and the risk yourself when you pick a plugin.
 
 ## Organization principles
 
@@ -54,10 +63,10 @@ The organization uses a certificate system to show where content comes from.
 ## Getting involved and contact
 
 - Organization repositories: [github.com/omdsc-dev](https://github.com/omdsc-dev)
+- Plugin listing requests and problem reports: open an Issue in [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin)
 - Questions and suggestions about the main product: open an Issue in [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)
 - Organization documents and notices: [this repository](https://github.com/omdsc-dev/.github) · [Rights and disclaimer](NOTICE.md)
 - Organization owner and contact: JularDepick (JularDepick@gmail.com)
-- Not yet disclosed
 
 ---
 
