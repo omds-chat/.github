@@ -1,0 +1,6 @@
+# EEC 扩展配置,由 ca_issue_eec.sh 通过 -extfile 引用
+[ eec_ext ]
+basicConstraints = critical,CA:FALSE
+keyUsage = critical,digitalSignature
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
