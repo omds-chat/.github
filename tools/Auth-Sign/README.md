@@ -26,7 +26,7 @@ Shell 脚本以 `bash 脚本名` 方式执行,两个 Python 转换脚本以 `pyt
 
 - **全部脚本只依赖 openssl**:`ca_gen_keypair.sh`、`ca_gen_root_cert.sh`、`eec_gen_keypair.sh`、`eec_gen_csr.sh`、`ca_issue_eec.sh`、`eec_sign_file.sh`、`verify_sign_by_eec.sh`、`verify_sign_by_eec_with_crl.sh`、`ca_revoke_and_gen_crl.sh`、`author_openssl_gen_keypair.sh`、`author_openssl_sign_file.sh`、`author_openssl_verify_file.sh`、`see_a_cert_info.sh`、`see_a_pkey_info.sh`。
 - **openssh 不是分发必需**:本工具集不提供任何 `ssh-keygen` 脚本。作者若要用 OpenSSH 做本地自验,可自行用 `ssh-keygen` 生成与查看公钥,但交付给验签方的一律是 OpenSSL PEM 格式的密钥与签名。
-- **两个转换脚本只依赖 Python 标准库**:`author_convert_openssh_to_openssl.py`、`author_convert_openssl_to_openssh.py` 不需要 `cryptography` 等第三方模块,但要求 `python >= 3.8`;转换后的自校验会调用 `openssl`,环境里存在 `ssh-keygen` 时还会额外用 `ssh-keygen -y`、`ssh-keygen -l` 复核。
+- **两个转换脚本只依赖 Python 标准库**:`author_convert_openssh_to_openssl.py`、`author_convert_openssl_to_openssh.py` 不需要 `cryptography` 等第三方模块,但要求 `python >= 3.8`;转换后的自校验会调用 `openssl`,环境里存在 `ssh-keygen` 时还会额外用 `ssh-keygen -y`、`ssh-keygen -l` 复核。带口令 OpenSSH 私钥的解密也由脚本自带的 bcrypt_pbkdf 与 AES-CTR 完成,不需要先用 `ssh-keygen -p` 去掉口令。
 
 > OpenSSL 版本低于 3.0 时,`openssl genpkey`、`openssl cms`、`openssl ca -gencrl` 的行为与本工具集不符,请先升级。
 
@@ -68,10 +68,10 @@ Shell 脚本以 `bash 脚本名` 方式执行,两个 Python 转换脚本以 `pyt
 | `author_openssl_gen_keypair.sh` | 独立签名方 | openssl | 生成作者密钥对(Ed25519) | 无 | `_AUTHOR_PRIVATE_KEY_` 作者私钥,建议 `author_secret` | 私钥 `author_secret`、公钥 `author_secret.pub` |
 | `author_openssl_sign_file.sh` | 独立签名方 | openssl | 用私钥对文件生成裸公钥签名 | 作者私钥、待签名文件 | `_AUTHOR_PRIVATE_KEY_` 作者私钥<br>`_DATA_FILE_` 待签名文件 | 签名 `<文件名>.sig` |
 | `author_openssl_verify_file.sh` | 验签方 | openssl | 用公钥校验裸公钥签名 | 作者公钥、原始文件、签名文件 | `_AUTHOR_PUBLIC_KEY_` 作者公钥,建议 `author_secret.pub`<br>`_DATA_FILE_` 原始文件 | 控制台验签结果 |
-| `author_convert_openssh_to_openssl.py` | 已有 OpenSSH 密钥的作者 | python >= 3.8<br>openssl | 把 OpenSSH 格式的 Ed25519 私钥或公钥转成 OpenSSL PEM | 无 | `_OPENSSH_PRIVATE_KEY_` OpenSSH 私钥,建议 `id_ed25519`<br>`_OPENSSH_PUBLIC_KEY_` OpenSSH 公钥,建议 `id_ed25519.pub`<br>`_AUTHOR_PRIVATE_KEY_` 输出私钥,建议 `author_secret`<br>`_AUTHOR_PUBLIC_KEY_` 输出公钥,建议 `author_secret.pub` | PKCS#8 私钥 `author_secret`、SPKI 公钥 `author_secret.pub` |
+| `author_convert_openssh_to_openssl.py` | 已有 OpenSSH 密钥的作者 | python >= 3.8<br>openssl | 把 OpenSSH 格式的 Ed25519 私钥或公钥转成 OpenSSL PEM;私钥带口令时先解密再转换,输出保持无口令 | 无 | `_OPENSSH_PRIVATE_KEY_` OpenSSH 私钥,建议 `id_ed25519`<br>`_OPENSSH_PUBLIC_KEY_` OpenSSH 公钥,建议 `id_ed25519.pub`<br>`_AUTHOR_PRIVATE_KEY_` 输出私钥,建议 `author_secret`<br>`_AUTHOR_PUBLIC_KEY_` 输出公钥,建议 `author_secret.pub` | PKCS#8 私钥 `author_secret`、SPKI 公钥 `author_secret.pub` |
 | `author_convert_openssl_to_openssh.py` | 已有 PEM 密钥的作者 | python >= 3.8<br>openssl<br>openssh(仅自校验) | 把 OpenSSL PEM 格式的 Ed25519 私钥或公钥转成 OpenSSH | 无 | `_AUTHOR_PRIVATE_KEY_` PEM 私钥,建议 `author_secret`<br>`_AUTHOR_PUBLIC_KEY_` PEM 公钥,建议 `author_secret.pub`<br>`_OPENSSH_PRIVATE_KEY_` 输出私钥,建议 `id_ed25519`<br>`_OPENSSH_PUBLIC_KEY_` 输出公钥,建议 `id_ed25519.pub` | openssh-key-v1 私钥 `id_ed25519`、`ssh-ed25519` 公钥 `id_ed25519.pub` |
 
-#### 为什么 ssh-keygen 转不了 Ed25519,为什么用标准库 Python,为什么只支持无口令密钥
+#### 为什么 ssh-keygen 转不了 Ed25519,为什么用标准库 Python,为什么口令处理也要自己写
 
 **`ssh-keygen` 的格式转换对 Ed25519 完全不可用。** 两条命令都拿不到 PEM,已实测:
 
@@ -87,7 +87,7 @@ $ ssh-keygen -p -m PKCS8 -f id_ed25519
 
 **用标准库 Python 而不是 `cryptography`。** 转换本身不需要密码学运算,真正需要判断的地方直接调用环境里已有的 `openssl`;不引入 pip 依赖与编译轮子,只用标准库的脚本可以原样复制到任何一台有 Python 的机器上运行,与本工具集"每个脚本可独立复制使用"的风格一致。
 
-**只支持无口令私钥。** 带口令的 OpenSSH 私钥用 `bcrypt_pbkdf` 派生密钥、再用 `aes256-ctr` 等分组密码加密,标准库没有 `bcrypt_pbkdf`,自己实现既不划算也容易出错。遇到 `cipher` 不是 `none` 的私钥,转换脚本直接报错并提示先用 `ssh-keygen -p -N ""` 去掉口令,不会静默产出错误结果。
+**口令的处理同样在脚本里完成。** 带口令的 OpenSSH 私钥先用 `bcrypt_pbkdf` 派生密钥、再用 `aes256-ctr` 之类的分组密码加密私有段。标准库没有 `bcrypt_pbkdf`,也没有 AES,脚本因此自带一份标准库实现的 Blowfish、bcrypt_pbkdf 与 AES-CTR:解密之后,私有段走的是与无口令私钥完全相同的解析、转换与自校验流程。这样环境里只要有 `python` 与 `openssl`,带口令私钥也能转成 PEM,既不用先手工执行 `ssh-keygen -p -N ""` 去掉口令,也不引入任何第三方模块。
 
 转换脚本都带自校验,任何一步不通过就以非零退出码结束,且不留半成品文件:OpenSSH 转 PEM 时,产出的 PEM 必须能被 `openssl pkey -in <文件> -noout` 读通,且由它派生的公钥与 OpenSSH 私钥内嵌的公钥一致;PEM 转 OpenSSH 时,产出的私钥会被回读比对种子与公钥,环境里有 `ssh-keygen` 时再用 `ssh-keygen -y` 反推公钥比一次。
 
@@ -96,11 +96,57 @@ python author_convert_openssh_to_openssl.py id_ed25519 -o author_secret         
 python author_convert_openssh_to_openssl.py id_ed25519.pub -o author_secret.pub    # 公钥:OpenSSH -> SPKI
 python author_convert_openssl_to_openssh.py author_secret -o id_ed25519            # 私钥:PKCS#8 -> OpenSSH
 python author_convert_openssl_to_openssh.py author_secret.pub -o id_ed25519.pub    # 公钥:SPKI -> ssh-ed25519
+
+# 带口令的 OpenSSH 私钥:优先交互提示或环境变量,避免口令进入 shell 历史与进程列表
+python author_convert_openssh_to_openssl.py id_ed25519 -o author_secret                          # 交互提示,不回显
+OPENSSH_KEY_PASSPHRASE=... python author_convert_openssh_to_openssl.py id_ed25519 -o author_secret
+python author_convert_openssh_to_openssl.py id_ed25519 -o author_secret --passphrase '...'      # 仅当上面两种都不便使用时
 ```
 
 不给 `-o` 时输出到 `<输入文件>.converted`。
 
 **交付格式仍然是 PEM。** `ssh-keygen -Y sign` 产出的 `SSHSIG` 宿主侧用 `openssl pkeyutl -verify` 校验不了,所以 OpenSSH 只用于作者本地自验,不作为分发格式;转换脚本只解决"作者手上已有 OpenSSH 密钥"的兼容问题,交付给验签方的依然是 PEM 密钥与 PEM 签名。
+
+#### 带口令的 OpenSSH 私钥:判断依据、口令来源与错误提示
+
+`openssh-key-v1` 容器的头部字段顺序固定,脚本先只解析头部,再据此决定走哪条路径:
+
+| 头部字段 | 类型 | 无口令时的值 | 在脚本里的作用 |
+|:---:|:---:|:---:|:---:|
+| `magic` | 固定字节 | `openssh-key-v1\0` | 标识容器格式,不匹配即报"不是 openssh-key-v1 结构" |
+| `ciphername` | string | `none` | 私有段的加密算法;不是 `none` 就表示私有段是密文 |
+| `kdfname` | string | `none` | 口令派生函数,带口令时为 `bcrypt` |
+| `kdfoptions` | string | 空 | `string salt` 加 `uint32 rounds`,供 bcrypt_pbkdf 使用 |
+| `nkeys` | uint32 | `1` | 密钥数量,本脚本只接受 1 |
+| `publickey` | string | 外层公钥 blob | 与私有段内的公钥交叉校验 |
+| `private` | string | 明文私有段 | 带口令时是密文,长度是 16 的整数倍 |
+
+判断依据只有一条:**`ciphername` 是不是 `none`**。为 `none` 时私有段是明文,同时要求 `kdfname` 也是 `none` 且 `kdfoptions` 为空,否则按"头部自相矛盾"报私钥损坏;不是 `none` 时私有段是密文,必须用 `kdfname` 与 `kdfoptions` 解密。不能改用"能不能解析出私钥"来判断:密文的随机字节同样可能凑出合法的 checkint 与填充,先看头部才不会把口令问题误判成格式问题。
+
+口令按下面的优先级取得,只有私钥确实带口令时才会用到:
+
+| 顺序 | 来源 | 适用场景与注意点 |
+|:---:|:---:|:---:|
+| 1 | `--passphrase` 参数 | 直接给出;会留在 shell 历史与进程列表里,只建议在环境变量不便时临时使用 |
+| 2 | `OPENSSH_KEY_PASSPHRASE` 环境变量 | 本机脚本、CI 之外的一次性使用,不进入命令行参数 |
+| 3 | 交互提示 | 仅当上面都没有、且标准输入是真正的控制台时用 `getpass` 提示,不回显,最多 3 次;不是控制台就直接报错退出,不会卡在提示上 |
+
+支持的加密算法只有 CTR 系列:`aes128-ctr`、`aes192-ctr`、`aes256-ctr`,密钥 16/24/32 字节,IV 固定 16 字节,与 `bcrypt_pbkdf` 的派生结果按"key 在前、iv 在后"切分。`aes256-cbc`、`chacha20-poly1305@openssh.com` 等其它 cipher 一律按"不支持"报错,不做猜测式解密。
+
+失败路径分开处理,退出码固定:
+
+| 退出码 | 含义 | 典型提示 |
+|:---:|:---:|:---:|
+| 0 | 成功 | `已写入 …` 与自校验通过 |
+| 1 | 普通错误 | 输入不存在、格式无法识别、`openssl` 自校验失败 |
+| 2 | 口令错误或口令缺失 | 解密后 checkint 两半不一致;非交互终端且没有提供口令;空口令 |
+| 3 | KDF 或加密参数不支持 | `ciphername=aes256-cbc`、`kdfname=scrypt`、rounds 非法 |
+| 4 | 不是 Ed25519 | 私钥类型是 `ssh-rsa` 等 |
+| 5 | 私钥结构损坏 | 结构截断、填充不符、外层公钥与私有段不一致 |
+
+密文被改动与口令错误在密码学上不可区分:改动落在第一个分组时 checkint 对不上,脚本按口令错误(退出码 2)提示,并在提示里写明"口令无误则私钥可能已损坏";改动落在后面的分组时 checkint 仍然通过,脚本会按填充或公钥不一致报私钥损坏(退出码 5)。
+
+输出始终是不带口令的 PKCS#8 私钥,转换结束时脚本会明确提示这一点,并提醒自行保管。`rounds` 决定 bcrypt_pbkdf 的工作量,`ssh-keygen` 一般取 16 上下,纯 Python 实现一次需要十几秒,`rounds` 越大越慢;派生开始前会在 stderr 打出 `正在用 bcrypt_pbkdf(rounds=…)派生密钥`,避免让人误以为脚本卡住。
 
 ### 三、通用查询脚本(只用 openssl)
 
@@ -173,7 +219,7 @@ CRL 由 `openssl ca -gencrl` 生成(`openssl crl -gen` 在 OpenSSL 3.x 不可用
 `eec_sign_file.sh`、`verify_sign_by_eec.sh`、`verify_sign_by_eec_with_crl.sh` 都带 `-md sha512`,`ca_revoke_and_gen_crl.sh` 生成的 `openssl.cnf` 也显式写 `default_md = sha512`,因此证书、CMS 与 CRL 全链路统一为 SHA-512。省略这两类参数时,摘要算法会随 OpenSSL 版本与密钥类型取默认值,不同环境可能不一致。CRL 的验签方按 CRL 自身声明的签名算法验证,旧 CRL 不需要重签,升级无兼容问题。
 
 **9. Ed25519 在 OpenSSH 与 PEM 之间没有原生互转,本工具集用自建脚本补齐。**
-`ssh-keygen` 与 `openssl` 都没有提供这条通道,转换能力由 `author_convert_openssh_to_openssl.py` 与 `author_convert_openssl_to_openssh.py` 自己维护:只支持 Ed25519、只支持无口令私钥,转换后自动自校验。交付给验签方的密钥与签名仍然是 PEM。
+`ssh-keygen` 与 `openssl` 都没有提供这条通道,转换能力由 `author_convert_openssh_to_openssl.py` 与 `author_convert_openssl_to_openssh.py` 自己维护:只支持 Ed25519,OpenSSH 私钥带口令时先解密再转换(见上文的口令说明),转换后自动自校验。交付给验签方的密钥与签名仍然是 PEM。
 
 **10. `see_a_pkey_info.sh` 会打印私钥内容,只能在本地自查时使用。**
 `openssl pkey -noout -text` 会把私钥的各个组成部分直接打到终端,Ed25519 私钥表现为种子与公钥的十六进制。不要在共享终端、录屏、CI 日志、聊天记录或任何会被留存的环境里运行它;只想确认密钥类型与长度时改用 `openssl pkey -in <私钥> -noout -text_pub`,需要公开材料时用 `openssl pkey -in <私钥> -pubout`。
@@ -273,7 +319,7 @@ bash eec_sign_file.sh       # _THE_FILENAME_ = plugin.zip,_EEC_CERT_ = eec.crt,_
 bash author_openssl_gen_keypair.sh   # _AUTHOR_PRIVATE_KEY_ = author_secret
 ```
 
-作者密钥为 Ed25519:私钥是 PEM 编码的 PKCS#8,公钥是 PEM 编码的 SPKI。作者需选定这一套工具链并一直使用,不要与 OpenSSH 混用;手上已有 OpenSSH 密钥的作者可以先用 `author_convert_openssh_to_openssl.py` 转成 PEM,再走这套流程。
+作者密钥为 Ed25519:私钥是 PEM 编码的 PKCS#8,公钥是 PEM 编码的 SPKI。作者需选定这一套工具链并一直使用,不要与 OpenSSH 混用;手上已有 OpenSSH 密钥(含带口令的私钥)的作者可以先用 `author_convert_openssh_to_openssl.py` 转成 PEM,再走这套流程。
 
 **第二步:对目标文件签名**
 
@@ -305,6 +351,8 @@ bash author_openssl_verify_file.sh  # _AUTHOR_PUBLIC_KEY_ = author_secret.pub,_D
 
 **`verify_sign_by_eec_with_crl.sh` 报 `certificate revoked`。**
 说明该 EEC 已在 CRL 中。这是吊销生效的预期结果,不是脚本错误。
+
+**带口令的 OpenSSH 私钥转换为什么比较慢。** 解密要用 `bcrypt_pbkdf` 按私钥头部记录的 `rounds` 现算密钥,`rounds` 越大越慢;脚本里的 bcrypt_pbkdf 是纯 Python 实现,`rounds` 为 16 上下时一次转换约十几秒,`rounds` 上百时会到分钟级。派生开始前脚本会在 stderr 打出进度提示,期间没有输出是正常的,不要中断进程。
 
 **OpenSSH 与 OpenSSL 的签名能否互验。**
 不能。`ssh-keygen -Y sign` 的 `SSHSIG` 与 `openssl pkeyutl -sign` 的裸签名格式不同;Ed25519 密钥本身可以用 `author_convert_*` 两个脚本在 OpenSSH 与 PEM 之间互转,但签名格式仍然不通用,所以交付统一使用 OpenSSL PEM 方案。
