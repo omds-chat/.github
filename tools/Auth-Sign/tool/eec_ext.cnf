@@ -1,4 +1,4 @@
-# EEC 扩展配置,由 ca_issue_eec.sh 通过 -extfile 引用
+# EEC 扩展配置,签发 EEC 时通过 -extfile eec_ext.cnf 引用(见 README 的 CA 角色第三步)
 [ eec_ext ]
 basicConstraints = critical,CA:FALSE
 keyUsage = critical,digitalSignature
