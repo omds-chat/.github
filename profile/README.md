@@ -6,7 +6,7 @@
 
 纯前端静态页面 · 无后端 · 插件化扩展
 
-[主线仓库](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) · [插件开发模板](https://github.com/omds-chat/dsc-plugin-template) · [同源插件仓库](https://github.com/omds-chat/dsc-inner-plugin)
+[主线仓库](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) · [插件开发模板](https://github.com/omds-chat/dsc-plugin-template) · [同源插件仓库](https://github.com/omds-chat/dsc-inner-plugin) · [人性化插件](https://github.com/omds-chat/dsc-humanize)
 
 </div>
 
@@ -46,6 +46,7 @@
 | 普通用户 | [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) | 了解使用方式与资费前提,取得可直接使用的静态包 |
 | 插件开发者 | [dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template) | 模板与示例,从零写出可用的插件 |
 | 社区贡献者 | [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin) | 提交插件收录,让作品被更多用户找到 |
+| 资产作者 | [dsc-humanize-asset-template](https://github.com/omds-chat/dsc-humanize-asset-template) | 模板与规范,从零写出可被 [awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset) 收录的资产包,供 dsc-humanize 用户安装使用 |
 
 ## 签名与信任
 
@@ -68,6 +69,7 @@
 
 - 组织仓库列表: [github.com/omds-chat](https://github.com/omds-chat)
 - 插件收录申请与问题反馈: 在 [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin) 中提交 Issue
+- 人性化资产收录申请与问题反馈: 在 [awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset) 中提交 Issue
 - 主线产品的问题与建议: 在 [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) 中提交 Issue
 - 组织资料与声明: [本仓库](https://github.com/omds-chat/.github) · [权利与免责声明](NOTICE.md)
 - 组织 Owner 与联系人: JularDepick (JularDepick@gmail.com)

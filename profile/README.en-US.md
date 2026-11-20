@@ -6,7 +6,7 @@
 
 Pure static front end · No backend · Plugin-based extension
 
-[Main repository](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) · [Plugin template](https://github.com/omds-chat/dsc-plugin-template) · [First-party plugin repository](https://github.com/omds-chat/dsc-inner-plugin)
+[Main repository](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) · [Plugin template](https://github.com/omds-chat/dsc-plugin-template) · [First-party plugin repository](https://github.com/omds-chat/dsc-inner-plugin) · [Humanize plugin](https://github.com/omds-chat/dsc-humanize)
 
 </div>
 
@@ -46,6 +46,7 @@ An open-source community organization primarily serving the DeepSeek ecosystem. 
 | Regular user | [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) | Learn how to use it and what it costs, and get a ready-to-use static package |
 | Plugin developer | [dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template) | Template and examples, so you can write a working plugin from scratch |
 | Community contributor | [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin) | Submit a plugin for listing and let more users find it |
+| Asset author | [dsc-humanize-asset-template](https://github.com/omds-chat/dsc-humanize-asset-template) | Template and specification, so you can write asset packages from scratch that [awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset) can list and dsc-humanize users can install |
 
 ## Signatures and trust
 
@@ -68,6 +69,7 @@ The organization uses a certificate system to show where content comes from.
 
 - Organization repositories: [github.com/omds-chat](https://github.com/omds-chat)
 - Plugin listing requests and problem reports: open an Issue in [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)
+- Humanize asset listing requests and problem reports: open an Issue in [awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset)
 - Questions and suggestions about the main product: open an Issue in [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)
 - Organization documents and notices: [this repository](https://github.com/omds-chat/.github) · [Rights and disclaimer](NOTICE.md)
 - Organization owner and contact: JularDepick (JularDepick@gmail.com)
