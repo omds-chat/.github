@@ -32,7 +32,7 @@ An open-source community organization primarily serving the DeepSeek ecosystem. 
 | **[dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template)** | Plugin development template with a starting skeleton and examples, so you get a working plugin faster |
 | **[dsc-inner-plugin](https://github.com/omds-chat/dsc-inner-plugin)** | First-party plugin index, listing plugins that promise not to leak user credentials or data |
 | **[awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)** | Community plugin collection, gathering community plugins with an index and a listing request entry |
-| **[dsc-humanize](https://github.com/omds-chat/dsc-humanize)** | First-party plugin that makes the assistant's persona, tone and personality feel more human, shipping with its own default source of humanize assets |
+| **[dsc-humanize](https://github.com/omds-chat/dsc-humanize)** | First-party plugin that moves the assistant toward what you expect, with the form you define yourself, shipping with its own default source of humanize assets |
 | **[dsc-humanize-asset-template](https://github.com/omds-chat/dsc-humanize-asset-template)** | The specification and skeleton for humanize assets, so authors can write asset packages ready to be listed |
 | **[dsc-humanize-inner-asset](https://github.com/omds-chat/dsc-humanize-inner-asset)** | The default humanize asset collection bundled with dsc-humanize, where every asset is an installable package |
 | **[awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset)** | Community humanize asset collection, gathering community contributions with an index and a listing request entry |

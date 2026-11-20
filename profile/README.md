@@ -32,7 +32,7 @@
 | **[dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template)** | 插件开发模板,提供示例与起步骨架,帮你快速写出可用的插件 |
 | **[dsc-inner-plugin](https://github.com/omds-chat/dsc-inner-plugin)** | 同源插件索引,收录承诺不泄露用户凭证与数据的插件 |
 | **[awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)** | 社区精选插件合集,收录社区插件并提供索引与收录申请入口 |
-| **[dsc-humanize](https://github.com/omds-chat/dsc-humanize)** | 内部插件,让助手的人设、语气与性格更贴近真人,并自带默认的人性化资产来源 |
+| **[dsc-humanize](https://github.com/omds-chat/dsc-humanize)** | 内部插件,让助手更接近你期望的样子,具体形态由你定义,并自带默认的人性化资产来源 |
 | **[dsc-humanize-asset-template](https://github.com/omds-chat/dsc-humanize-asset-template)** | 人性化资产的规范与骨架,帮助作者写出可被收录的资产包 |
 | **[dsc-humanize-inner-asset](https://github.com/omds-chat/dsc-humanize-inner-asset)** | dsc-humanize 自带的默认人性化资产合集,每个资产都是一个可安装的包 |
 | **[awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset)** | 社区贡献的人性化资产合集,提供索引与收录入口 |
