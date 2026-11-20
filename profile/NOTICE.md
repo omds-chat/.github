@@ -4,7 +4,7 @@
 
 ### 非官方声明
 
-`omdsc-dev` 是由社区成员自发创建并维护的非官方组织,与 DeepSeek 官方及其关联主体不存在隶属、授权、合作、赞助或背书关系。本组织及其发布的内容都不应被理解为 DeepSeek 的官方组织、官方产品或官方发行版本。仓库与文档中出现的 "DeepSeek" 字样仅用于说明相关性、兼容性与适用对象,不表示任何官方关系。
+`omds-chat` 是由社区成员自发创建并维护的非官方组织,与 DeepSeek 官方及其关联主体不存在隶属、授权、合作、赞助或背书关系。本组织及其发布的内容都不应被理解为 DeepSeek 的官方组织、官方产品或官方发行版本。仓库与文档中出现的 "DeepSeek" 字样仅用于说明相关性、兼容性与适用对象,不表示任何官方关系。
 
 ### 商标与权利归属
 
@@ -24,13 +24,13 @@
 
 ### 许可事实
 
-DeepSeek-Chat-Enhanced 对源仓库 deepseek-ai/chat-demo 所做的新增、修改与合并,按 Apache-2.0 许可证授权,并随产物一同分发;源自源仓库的内容沿用 MIT 许可证,并随产物一同分发。第三方依赖与插件遵循各自的许可证。具体条款见该仓库的 [COPYRIGHT](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/COPYRIGHT)、[Apache-2.0 许可证](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/LICENSE) 与[仓库说明](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.md)。
+DeepSeek-Chat-Enhanced 对源仓库 deepseek-ai/chat-demo 所做的新增、修改与合并,按 Apache-2.0 许可证授权,并随产物一同分发;源自源仓库的内容沿用 MIT 许可证,并随产物一同分发。第三方依赖与插件遵循各自的许可证。具体条款见该仓库的 [COPYRIGHT](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/COPYRIGHT)、[Apache-2.0 许可证](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/LICENSE) 与[仓库说明](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/README.md)。
 
 ### 异议与联系
 
-如对收录、署名、权利归属或潜在侵权有异议,请在 [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin) 中提交 Issue,或联系组织 Owner JularDepick (JularDepick@gmail.com)。我们会核实并处理,包括移除相关内容。
+如对收录、署名、权利归属或潜在侵权有异议,请在 [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin) 中提交 Issue,或联系组织 Owner JularDepick (JularDepick@gmail.com)。我们会核实并处理,包括移除相关内容。
 
-Copyright (c) 2026 omdsc-dev
+Copyright (c) 2026 omds-chat
 
 ---
 
@@ -38,7 +38,7 @@ Copyright (c) 2026 omdsc-dev
 
 ### Unofficial status
 
-`omdsc-dev` is an unofficial organization created and maintained by community members. It is not affiliated with, authorized by, partnered with, sponsored by, or endorsed by DeepSeek or any of its affiliates. Neither this organization nor anything it publishes should be read as an official DeepSeek organization, product, or release. The word "DeepSeek" appears in repositories and documents only to describe relevance, compatibility, and intended use, and does not imply any official relationship.
+`omds-chat` is an unofficial organization created and maintained by community members. It is not affiliated with, authorized by, partnered with, sponsored by, or endorsed by DeepSeek or any of its affiliates. Neither this organization nor anything it publishes should be read as an official DeepSeek organization, product, or release. The word "DeepSeek" appears in repositories and documents only to describe relevance, compatibility, and intended use, and does not imply any official relationship.
 
 ### Trademarks and ownership
 
@@ -58,10 +58,10 @@ The organization's products, including DeepSeek-Chat-Enhanced, are pure static f
 
 ### Licensing facts
 
-Additions, modifications and merges made by DeepSeek-Chat-Enhanced on top of the upstream repository deepseek-ai/chat-demo are licensed under Apache-2.0 and distributed together with the build output; content originating from the upstream repository remains under the MIT license and is distributed together with the build output. Third-party dependencies and plugins follow their own licenses. See [COPYRIGHT](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/COPYRIGHT), the [Apache-2.0 license](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/LICENSE) and the [repository overview](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.md) in that repository for the exact terms.
+Additions, modifications and merges made by DeepSeek-Chat-Enhanced on top of the upstream repository deepseek-ai/chat-demo are licensed under Apache-2.0 and distributed together with the build output; content originating from the upstream repository remains under the MIT license and is distributed together with the build output. Third-party dependencies and plugins follow their own licenses. See [COPYRIGHT](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/COPYRIGHT), the [Apache-2.0 license](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/LICENSE) and the [repository overview](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/README.md) in that repository for the exact terms.
 
 ### Objections and contact
 
-If you have an objection regarding a listing, attribution, ownership, or possible infringement, open an Issue in [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin), or contact the organization owner JularDepick (JularDepick@gmail.com). We will review the matter and act on it, including removing the content concerned.
+If you have an objection regarding a listing, attribution, ownership, or possible infringement, open an Issue in [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin), or contact the organization owner JularDepick (JularDepick@gmail.com). We will review the matter and act on it, including removing the content concerned.
 
-Copyright (c) 2026 omdsc-dev
+Copyright (c) 2026 omds-chat

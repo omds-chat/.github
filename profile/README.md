@@ -1,12 +1,12 @@
 <div align="center">
 
-# omdsc-dev
+# omds-chat
 
 **简体中文** · [English](README.en-US.md)
 
 纯前端静态页面 · 无后端 · 插件化扩展
 
-[主线仓库](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) · [插件开发模板](https://github.com/omdsc-dev/dsc-plugin-template) · [同源插件仓库](https://github.com/omdsc-dev/dsc-inner-plugin)
+[主线仓库](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) · [插件开发模板](https://github.com/omds-chat/dsc-plugin-template) · [同源插件仓库](https://github.com/omds-chat/dsc-inner-plugin)
 
 </div>
 
@@ -18,30 +18,30 @@
 
 | 我想…… | 入口 |
 |:---:|:---:|
-| 了解主线产品做了什么 | **[主线仓库说明](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.md)** · [English](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.en-US.md) |
-| 获取可用的静态包 | **[主线仓库 Releases](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/releases)** |
-| 开发一个插件 | **[插件开发模板](https://github.com/omdsc-dev/dsc-plugin-template)** |
-| 浏览插件索引与收录范围 | **[社区精选插件合集](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [同源插件索引仓库](https://github.com/omdsc-dev/dsc-inner-plugin) |
-| 反馈问题或申请收录 | **[社区精选插件合集](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [组织仓库](https://github.com/omdsc-dev) |
+| 了解主线产品做了什么 | **[主线仓库说明](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/README.md)** · [English](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/README.en-US.md) |
+| 获取可用的静态包 | **[主线仓库 Releases](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/releases)** |
+| 开发一个插件 | **[插件开发模板](https://github.com/omds-chat/dsc-plugin-template)** |
+| 浏览插件索引与收录范围 | **[社区精选插件合集](https://github.com/omds-chat/awesome-dsc-plugin)** · [同源插件索引仓库](https://github.com/omds-chat/dsc-inner-plugin) |
+| 反馈问题或申请收录 | **[社区精选插件合集](https://github.com/omds-chat/awesome-dsc-plugin)** · [组织仓库](https://github.com/omds-chat) |
 
 ## 仓库矩阵
 
 | 仓库 | 能做什么 |
 |:---:|:---:|
-| **[DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)** | 解压即用的社区增强聊天网页,基于官方 deepseek-ai/chat-demo 增强 |
-| **[dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template)** | 插件开发模板,提供示例与起步骨架,帮你快速写出可用的插件 |
-| **[dsc-inner-plugin](https://github.com/omdsc-dev/dsc-inner-plugin)** | 同源插件索引,收录承诺不泄露用户凭证与数据的插件 |
-| **[awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin)** | 社区精选插件合集,收录社区插件并提供索引与收录申请入口 |
-| **[omdsc-dev.github.io](https://github.com/omdsc-dev/omdsc-dev.github.io)** | 组织站点的在线入口,可由此进入主线的在线页面 |
-| **[.github](https://github.com/omdsc-dev/.github)** | 你现在浏览的组织主页,以及权利、署名与免责声明 |
+| **[DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)** | 解压即用的社区增强聊天网页,基于官方 deepseek-ai/chat-demo 增强 |
+| **[dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template)** | 插件开发模板,提供示例与起步骨架,帮你快速写出可用的插件 |
+| **[dsc-inner-plugin](https://github.com/omds-chat/dsc-inner-plugin)** | 同源插件索引,收录承诺不泄露用户凭证与数据的插件 |
+| **[awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)** | 社区精选插件合集,收录社区插件并提供索引与收录申请入口 |
+| **[omds-chat.github.io](https://github.com/omds-chat/omds-chat.github.io)** | 组织站点的在线入口,可由此进入主线的在线页面 |
+| **[.github](https://github.com/omds-chat/.github)** | 你现在浏览的组织主页,以及权利、署名与免责声明 |
 
 ## 生态与角色
 
 | 角色 | 从哪里进入 | 能得到什么 |
 |:---:|:---:|:---:|
-| 普通用户 | [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) | 了解使用方式与资费前提,取得可直接使用的静态包 |
-| 插件开发者 | [dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template) | 模板与示例,从零写出可用的插件 |
-| 社区贡献者 | [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin) | 提交插件收录,让作品被更多用户找到 |
+| 普通用户 | [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) | 了解使用方式与资费前提,取得可直接使用的静态包 |
+| 插件开发者 | [dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template) | 模板与示例,从零写出可用的插件 |
+| 社区贡献者 | [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin) | 提交插件收录,让作品被更多用户找到 |
 
 ## 签名与信任
 
@@ -62,12 +62,12 @@
 
 ## 参与方式与联系
 
-- 组织仓库列表: [github.com/omdsc-dev](https://github.com/omdsc-dev)
-- 插件收录申请与问题反馈: 在 [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin) 中提交 Issue
-- 主线产品的问题与建议: 在 [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) 中提交 Issue
-- 组织资料与声明: [本仓库](https://github.com/omdsc-dev/.github) · [权利与免责声明](NOTICE.md)
+- 组织仓库列表: [github.com/omds-chat](https://github.com/omds-chat)
+- 插件收录申请与问题反馈: 在 [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin) 中提交 Issue
+- 主线产品的问题与建议: 在 [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) 中提交 Issue
+- 组织资料与声明: [本仓库](https://github.com/omds-chat/.github) · [权利与免责声明](NOTICE.md)
 - 组织 Owner 与联系人: JularDepick (JularDepick@gmail.com)
 
 ---
 
-<sub>omdsc-dev 是非官方的社区组织,与 DeepSeek 及其关联主体不存在隶属、授权、合作、赞助或背书关系。插件运行在浏览器中,可以接触到保存在浏览器存储里的 API Key,请只启用你信任来源的插件。完整说明见[权利、署名与免责声明](NOTICE.md)。</sub>
+<sub>omds-chat 是非官方的社区组织,与 DeepSeek 及其关联主体不存在隶属、授权、合作、赞助或背书关系。插件运行在浏览器中,可以接触到保存在浏览器存储里的 API Key,请只启用你信任来源的插件。完整说明见[权利、署名与免责声明](NOTICE.md)。</sub>

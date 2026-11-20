@@ -1,12 +1,12 @@
 <div align="center">
 
-# omdsc-dev
+# omds-chat
 
 [简体中文](README.md) · **English**
 
 Pure static front end · No backend · Plugin-based extension
 
-[Main repository](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) · [Plugin template](https://github.com/omdsc-dev/dsc-plugin-template) · [First-party plugin repository](https://github.com/omdsc-dev/dsc-inner-plugin)
+[Main repository](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) · [Plugin template](https://github.com/omds-chat/dsc-plugin-template) · [First-party plugin repository](https://github.com/omds-chat/dsc-inner-plugin)
 
 </div>
 
@@ -18,30 +18,30 @@ An open-source community organization primarily serving the DeepSeek ecosystem. 
 
 | What I want | Entry |
 |:---:|:---:|
-| Understand what the main product does | **[Main repository overview](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.en-US.md)** · [简体中文](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/blob/main/README.md) |
-| Get a static package | **[Main repository releases](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced/releases)** |
-| Build a plugin | **[Plugin development template](https://github.com/omdsc-dev/dsc-plugin-template)** |
-| Browse the plugin index and listing scope | **[Community plugin collection](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [First-party plugin index repository](https://github.com/omdsc-dev/dsc-inner-plugin) |
-| Report a problem or request listing | **[Community plugin collection](https://github.com/omdsc-dev/awesome-dsc-plugin)** · [Organization](https://github.com/omdsc-dev) |
+| Understand what the main product does | **[Main repository overview](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/README.en-US.md)** · [简体中文](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/blob/main/README.md) |
+| Get a static package | **[Main repository releases](https://github.com/omds-chat/DeepSeek-Chat-Enhanced/releases)** |
+| Build a plugin | **[Plugin development template](https://github.com/omds-chat/dsc-plugin-template)** |
+| Browse the plugin index and listing scope | **[Community plugin collection](https://github.com/omds-chat/awesome-dsc-plugin)** · [First-party plugin index repository](https://github.com/omds-chat/dsc-inner-plugin) |
+| Report a problem or request listing | **[Community plugin collection](https://github.com/omds-chat/awesome-dsc-plugin)** · [Organization](https://github.com/omds-chat) |
 
 ## Repository matrix
 
 | Repository | What it does |
 |:---:|:---:|
-| **[DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)** | A community-enhanced chat page that works right after unzipping, built on the official deepseek-ai/chat-demo |
-| **[dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template)** | Plugin development template with a starting skeleton and examples, so you get a working plugin faster |
-| **[dsc-inner-plugin](https://github.com/omdsc-dev/dsc-inner-plugin)** | First-party plugin index, listing plugins that promise not to leak user credentials or data |
-| **[awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin)** | Community plugin collection, gathering community plugins with an index and a listing request entry |
-| **[omdsc-dev.github.io](https://github.com/omdsc-dev/omdsc-dev.github.io)** | Online entry for the organization site, leading to the mainline online page |
-| **[.github](https://github.com/omdsc-dev/.github)** | The organization home page you are reading, together with the rights, attribution and disclaimer notice |
+| **[DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)** | A community-enhanced chat page that works right after unzipping, built on the official deepseek-ai/chat-demo |
+| **[dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template)** | Plugin development template with a starting skeleton and examples, so you get a working plugin faster |
+| **[dsc-inner-plugin](https://github.com/omds-chat/dsc-inner-plugin)** | First-party plugin index, listing plugins that promise not to leak user credentials or data |
+| **[awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)** | Community plugin collection, gathering community plugins with an index and a listing request entry |
+| **[omds-chat.github.io](https://github.com/omds-chat/omds-chat.github.io)** | Online entry for the organization site, leading to the mainline online page |
+| **[.github](https://github.com/omds-chat/.github)** | The organization home page you are reading, together with the rights, attribution and disclaimer notice |
 
 ## Ecosystem and roles
 
 | Role | Where to enter | What you get |
 |:---:|:---:|:---:|
-| Regular user | [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced) | Learn how to use it and what it costs, and get a ready-to-use static package |
-| Plugin developer | [dsc-plugin-template](https://github.com/omdsc-dev/dsc-plugin-template) | Template and examples, so you can write a working plugin from scratch |
-| Community contributor | [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin) | Submit a plugin for listing and let more users find it |
+| Regular user | [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced) | Learn how to use it and what it costs, and get a ready-to-use static package |
+| Plugin developer | [dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template) | Template and examples, so you can write a working plugin from scratch |
+| Community contributor | [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin) | Submit a plugin for listing and let more users find it |
 
 ## Signatures and trust
 
@@ -62,12 +62,12 @@ The organization uses a certificate system to show where content comes from.
 
 ## Getting involved and contact
 
-- Organization repositories: [github.com/omdsc-dev](https://github.com/omdsc-dev)
-- Plugin listing requests and problem reports: open an Issue in [awesome-dsc-plugin](https://github.com/omdsc-dev/awesome-dsc-plugin)
-- Questions and suggestions about the main product: open an Issue in [DeepSeek-Chat-Enhanced](https://github.com/omdsc-dev/DeepSeek-Chat-Enhanced)
-- Organization documents and notices: [this repository](https://github.com/omdsc-dev/.github) · [Rights and disclaimer](NOTICE.md)
+- Organization repositories: [github.com/omds-chat](https://github.com/omds-chat)
+- Plugin listing requests and problem reports: open an Issue in [awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)
+- Questions and suggestions about the main product: open an Issue in [DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)
+- Organization documents and notices: [this repository](https://github.com/omds-chat/.github) · [Rights and disclaimer](NOTICE.md)
 - Organization owner and contact: JularDepick (JularDepick@gmail.com)
 
 ---
 
-<sub>omdsc-dev is an unofficial community organization and is not affiliated with, authorized by, partnered with, sponsored by, or endorsed by DeepSeek or its affiliates. Plugins run in the browser and can reach the API Key kept in browser storage, so enable only plugins from sources you trust. See the [rights, attribution and disclaimer](NOTICE.md) for details.</sub>
+<sub>omds-chat is an unofficial community organization and is not affiliated with, authorized by, partnered with, sponsored by, or endorsed by DeepSeek or its affiliates. Plugins run in the browser and can reach the API Key kept in browser storage, so enable only plugins from sources you trust. See the [rights, attribution and disclaimer](NOTICE.md) for details.</sub>
