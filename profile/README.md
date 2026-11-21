@@ -26,8 +26,6 @@
 
 ## 仓库矩阵
 
-## Repository matrix
-
 | 仓库 | 能做什么 |
 |:---:|:---:|
 | **[DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)** | 解压即用的社区增强聊天网页,基于官方 deepseek-ai/chat-demo 增强 |

@@ -26,8 +26,6 @@ An open-source community organization primarily serving the DeepSeek ecosystem. 
 
 ## Repository matrix
 
-## Repository matrix
-
 | Repository | What it does |
 |:---:|:---:|
 | **[DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)** | A community-enhanced chat page that works right after unzipping, built on the official deepseek-ai/chat-demo |
