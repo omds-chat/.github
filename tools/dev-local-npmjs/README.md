@@ -6,8 +6,8 @@
 
 | 命令 | 说明 |
 |:---:|:---|
-| `node tools/npm-registry-mock/npm-registry-mock.mjs` | 默认端口 61116 |
-| `node tools/npm-registry-mock/npm-registry-mock.mjs --port <端口>` | 自定端口 |
+| `node tools/dev-local-npmjs/dev-local-npmjs.mjs` | 默认端口 61116 |
+| `node tools/dev-local-npmjs/dev-local-npmjs.mjs --port <端口>` | 自定端口 |
 
 ## 二、端点
 
