@@ -19,9 +19,9 @@
  *
  * 用法:
  *   node scripts/dev/npm-registry-mock.mjs
- *   node scripts/dev/npm-registry-mock.mjs --port 61123 --packages packages --host 127.0.0.1
+ *   node scripts/dev/npm-registry-mock.mjs --port 61116 --packages packages --host 127.0.0.1
  *
- * 端口默认 61123:61117-61122 已被其他本地联调服务占用。
+ * 端口默认 61116:61117-61122 已被其他本地联调服务占用。
  * 只监听本地回环 127.0.0.1,不对外网提供服务。
  */
 import { createHash } from 'node:crypto'
@@ -34,7 +34,7 @@ const moduleDir = dirname(fileURLToPath(import.meta.url))
 const repoRoot = join(moduleDir, '..', '..')
 
 /** 默认端口,与 .env.example 的 NPM_REGISTRY_URL 保持一致 */
-const DEFAULT_PORT = 61123
+const DEFAULT_PORT = 61116
 /** 默认监听地址:联调用具只开本地回环 */
 const DEFAULT_HOST = '127.0.0.1'
 /** 默认数据目录:仓库根 packages/,gitignore 已排除 */
@@ -53,7 +53,7 @@ function usage() {
     '用法: node scripts/dev/npm-registry-mock.mjs [选项]',
     '',
     '选项:',
-    '  --port <端口>        监听端口,默认 ' + DEFAULT_PORT + '(61117-61122 已被其他联调服务占用)',
+    '  --port <端口>        监听端口,默认 ' + DEFAULT_PORT + '(61117-61123 已被其他联调服务占用)',
     '  --host <地址>        监听地址,默认 ' + DEFAULT_HOST + '(只开本地回环)',
     '  --packages <目录>    数据目录,默认仓库根 ' + DEFAULT_PACKAGES_DIR + '/(gitignore 已排除)',
     '  --help               显示本说明',

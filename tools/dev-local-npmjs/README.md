@@ -6,7 +6,7 @@
 
 | 命令 | 说明 |
 |:---:|:---|
-| `node tools/npm-registry-mock/npm-registry-mock.mjs` | 默认端口 61123 |
+| `node tools/npm-registry-mock/npm-registry-mock.mjs` | 默认端口 61116 |
 | `node tools/npm-registry-mock/npm-registry-mock.mjs --port <端口>` | 自定端口 |
 
 ## 二、端点
@@ -22,7 +22,7 @@
 
 ## 三、与收录校验的配合
 
-各合集仓库的 `NPM_REGISTRY_URL` 环境变量(或 `.env`)指向本模拟器(默认 `http://127.0.0.1:61123/`),`verify-catalog`、`verify-collection` 与 `preflight` 即离线查询;变量缺省时脚本回落官方源。收录时序的两种联调场景(先收录后发布、先发布后收录)与完整命令见 awesome-dsc-plugin README 的「离线联调 npm 校验」节。
+各合集仓库的 `NPM_REGISTRY_URL` 环境变量(或 `.env`)指向本模拟器(默认 `http://127.0.0.1:61116/`),`verify-catalog`、`verify-collection` 与 `preflight` 即离线查询;变量缺省时脚本回落官方源。收录时序的两种联调场景(先收录后发布、先发布后收录)与完整命令见 awesome-dsc-plugin README 的「离线联调 npm 校验」节。
 
 ## 四、边界
 
