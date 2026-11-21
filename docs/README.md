@@ -11,6 +11,7 @@
 | [profile/README.en-US.md](../profile/README.en-US.md) | 组织主页的英文版本 | 与中文版逐节对应的英文表述 | 读者使用英文,或需要核对中英表述是否一致时 | 用户、贡献者 |
 | [profile/NOTICE.md](../profile/NOTICE.md) | 权利、署名与免责声明(中英双语) | 非官方声明、商标与权利归属、各项目的权利、收录即托管、浏览器运行与凭证风险、许可事实、异议与联系 | 引用组织名义、分发产物、处理署名与侵权异议、评估使用风险时 | 用户、贡献者、维护者 |
 | [tools/Auth-Sign/README.md](../tools/Auth-Sign/README.md) | 证书与签名工具集的完整说明 | 前置环境、算法约定、逐个脚本的用法与占位符、命名与后缀约定、使用限制、角色视角流程、常见问题(含 OpenSSH 与 PEM 互转、带口令私钥的处理) | 生成密钥与证书、签发与校验签名、在 OpenSSH 与 PEM 之间转换密钥时 | 用户、维护者、Agent |
+| [tools/npm-registry-mock/README.md](../tools/npm-registry-mock/README.md) | 本地 npm registry 模拟器(联调用具) | 端点语义、启动方式、与各合集收录校验的配合、边界 | 离线联调 npm 包名强校验、模拟包发布与下架时序时 | 维护者、Agent |
 | [public/certs/README.md](../public/certs/README.md) | 公开证书材料的查阅说明 | 证书体系列表(类型、/O、/CN、颁发者、到期时间)、两棵互不隶属的信任层级树、每个来源目录放什么与不放什么、用 openssl 校验一张证书与一条链的只读命令 | 核对产物出自哪个签名渠道、验证证书链、判断某张证书属于哪条链时 | 用户、插件与资产作者、Agent |
 | [docs/essays/trust-system.md](essays/trust-system.md) | CA-EEC-Sign 信任体系的论证 | 「是什么—为什么—怎么办」:纯前端无后端形态下信任的必要性、X.509/CMS 复用与两层根域、三层清单与作者签名定位的可行性,以及发布可追溯、收录可审计、出事可撤回、用户只面对一个开关的现实意义 | 需要向他人解释或评估签名与信任体系为什么这样设计时 | 用户、贡献者、维护者 |
 | [docs/essays/plugin-ecosystem.md](essays/plugin-ecosystem.md) | 宿主—内部插件—社区插件三层生态的论证 | 「是什么—为什么—怎么办」:三层各自职责、内置所有需求不可能与底线承诺、丰富度与 npm 包名一致,能力/挂载点契约与市场渠道的可行性,上架路径与统一安装体验的现实意义 | 需要向他人解释或评估插件生态为什么分层时 | 用户、贡献者、维护者 |

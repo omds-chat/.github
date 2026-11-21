@@ -70,7 +70,7 @@
 
 ### 3.1 能力与挂载点契约
 
-- 插件对宿主的一切访问只走 context 上的受限能力对象,能力清单封闭且逐项限流:sessions:list、sessions:read、sessions:rename、events:session、notify、settings:locale、plugins:storage、net:fetch。
+- 插件对宿主的一切访问只走 context 上的受限能力对象,能力清单封闭且逐项限流,完整清单见运行时规范第四节,第三方可申请的能力与内置专用的能力分表列明。
 - net:fetch 只对内置插件开放:第三方插件在清单里申请它,按 unknown-capability 拒绝,调用层再校验一次。
 - 插件拿不到 API Key、附件原件、请求快照与其他插件的本地数据;可见数据范围逐项列明。
 - 挂载点同样封闭:只有清单声明了对应能力才能订阅,安装时按清单校验能力与挂载点,名字不在表内即拒绝(unknown-mount),调用时再校验一次。
