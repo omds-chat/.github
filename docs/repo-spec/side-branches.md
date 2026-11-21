@@ -54,7 +54,7 @@
 | 仓库 | 并行分支 | 说明 |
 |:---:|:---:|:---|
 | `DeepSeek-Chat-Enhanced` | `dist-history`、`certs`、`trusted-manifest` | 三份内容分别归档，发布时合并成页面包 |
-| `awesome-dsc-plugin` | `ci-memory` | 记三层清单的 `revision`，按合集分目录 |
+| `awesome-dsc-plugin` | `ci-memory` | 记三层清单的上一版，放在 `layer-manifests/` 下按分发路径镜像 |
 | `dsc-inner-plugin` | 无 | 只发布 Pages 制品，不跨构建延续状态 |
 | 其余仓库 | 无 | 见各仓库 `docs/README.md` |
 
