@@ -995,7 +995,7 @@ def main(argv=None):
         "-p", "--passphrase",
         help="带口令 OpenSSH 私钥的口令;省略时读环境变量 %s,"
              "都没有且私钥确实带口令时才交互提示输入。命令行参数会留在 shell 历史与进程列表里,"
-             "本机使用更推荐环境变量或交互输入" % PASSPHRASE_ENV)
+             "本地使用更推荐环境变量或交互输入" % PASSPHRASE_ENV)
     force_utf8()
     args = parser.parse_args(argv)
 

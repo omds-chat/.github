@@ -394,7 +394,7 @@ OpenSSL 3.x 的 `openssl pkey -aes-256-cbc`、`openssl genpkey -aes-256-cbc` 产
 | 顺序 | 来源 | 适用场景与注意点 |
 |:---:|:---:|:---:|
 | 1 | `--passphrase`、`--output-passphrase` 参数 | 直接给出;会留在 shell 历史与进程列表里,只建议在环境变量不便时临时使用 |
-| 2 | 环境变量 `OPENSSH_KEY_PASSPHRASE`(输入口令)、`OPENSSH_OUTPUT_PASSPHRASE`(输出口令) | 本机脚本、CI 之外的一次性使用,不进入命令行参数 |
+| 2 | 环境变量 `OPENSSH_KEY_PASSPHRASE`(输入口令)、`OPENSSH_OUTPUT_PASSPHRASE`(输出口令) | 本地脚本、CI 之外的一次性使用,不进入命令行参数 |
 | 3 | 交互提示 | 仅当上面都没有、且标准输入是真正的控制台时用 `getpass` 提示,不回显,最多 3 次;设置输出口令时要求连续两次输入一致。不是控制台就直接报错退出,不会卡在提示上 |
 
 | 退出码 | 含义 | 典型提示 |
