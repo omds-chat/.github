@@ -26,17 +26,23 @@ An open-source community organization primarily serving the DeepSeek ecosystem. 
 
 ## Repository matrix
 
+## Repository matrix
+
 | Repository | What it does |
 |:---:|:---:|
 | **[DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)** | A community-enhanced chat page that works right after unzipping, built on the official deepseek-ai/chat-demo |
+| **[omds-chat.github.io](https://github.com/omds-chat/omds-chat.github.io)** | Online entry for the organization site, leading to the mainline online page |
 | **[dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template)** | Plugin development template with a starting skeleton and examples, so you get a working plugin faster |
+| **[dsc-plugin-set-template](https://github.com/omds-chat/dsc-plugin-set-template)** | Plugin collection template; copy it and you get a collection skeleton with the distribution spec, schemas and signature checks |
 | **[dsc-inner-plugin](https://github.com/omds-chat/dsc-inner-plugin)** | First-party plugin index, listing plugins that promise not to leak user credentials or data |
 | **[awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)** | Community plugin collection, gathering community plugins with an index and a listing request entry |
 | **[dsc-humanize](https://github.com/omds-chat/dsc-humanize)** | First-party plugin that moves the assistant toward what you expect, with the form you define yourself, shipping with its own default source of humanize assets |
+| **[dsc-llm-tune](https://github.com/omds-chat/dsc-llm-tune)** | First-party plugin that hands the request sampling parameters (temperature, `top_p`, max length, stop words) straight to you; complements dsc-humanize but they cannot coexist |
+| **[dsc-provider-switch](https://github.com/omds-chat/dsc-provider-switch)** | First-party plugin that picks a provider endpoint per model capability; ships DeepSeek and accepts custom OpenAI compatible and Anthropic compatible endpoints |
 | **[dsc-humanize-asset-template](https://github.com/omds-chat/dsc-humanize-asset-template)** | The specification and skeleton for humanize assets, so authors can write asset packages ready to be listed |
 | **[dsc-humanize-inner-asset](https://github.com/omds-chat/dsc-humanize-inner-asset)** | The default humanize asset collection bundled with dsc-humanize, where every asset is an installable package |
 | **[awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset)** | Community humanize asset collection, gathering community contributions with an index and a listing request entry |
-| **[omds-chat.github.io](https://github.com/omds-chat/omds-chat.github.io)** | Online entry for the organization site, leading to the mainline online page |
+| **[dsc-humanize-assistant](https://github.com/omds-chat/dsc-humanize-assistant)** | The official first humanize asset package, with a preset persona, labels, strategies and injection texts, installable as is |
 | **[.github](https://github.com/omds-chat/.github)** | The organization home page you are reading, together with the rights, attribution and disclaimer notice |
 
 ## Ecosystem and roles

@@ -26,17 +26,23 @@
 
 ## 仓库矩阵
 
+## Repository matrix
+
 | 仓库 | 能做什么 |
 |:---:|:---:|
 | **[DeepSeek-Chat-Enhanced](https://github.com/omds-chat/DeepSeek-Chat-Enhanced)** | 解压即用的社区增强聊天网页,基于官方 deepseek-ai/chat-demo 增强 |
+| **[omds-chat.github.io](https://github.com/omds-chat/omds-chat.github.io)** | 组织站点的在线入口,可由此进入主线的在线页面 |
 | **[dsc-plugin-template](https://github.com/omds-chat/dsc-plugin-template)** | 插件开发模板,提供示例与起步骨架,帮你快速写出可用的插件 |
+| **[dsc-plugin-set-template](https://github.com/omds-chat/dsc-plugin-set-template)** | 插件合集模板,复制即得一套带分发规范、Schema 与签名校验的合集骨架 |
 | **[dsc-inner-plugin](https://github.com/omds-chat/dsc-inner-plugin)** | 同源插件索引,收录承诺不泄露用户凭证与数据的插件 |
 | **[awesome-dsc-plugin](https://github.com/omds-chat/awesome-dsc-plugin)** | 社区精选插件合集,收录社区插件并提供索引与收录申请入口 |
 | **[dsc-humanize](https://github.com/omds-chat/dsc-humanize)** | 内部插件,让助手更接近你期望的样子,具体形态由你定义,并自带默认的人性化资产来源 |
+| **[dsc-llm-tune](https://github.com/omds-chat/dsc-llm-tune)** | 内部插件,把请求采样参数(温度、`top_p`、最大长度、停止词)直接交给你调,与 dsc-humanize 互补但不并存 |
+| **[dsc-provider-switch](https://github.com/omds-chat/dsc-provider-switch)** | 内部插件,按能力为每项模型能力挑选供应端点,内置 DeepSeek 并支持自定义 OpenAI 兼容、Anthropic 兼容端点 |
 | **[dsc-humanize-asset-template](https://github.com/omds-chat/dsc-humanize-asset-template)** | 人性化资产的规范与骨架,帮助作者写出可被收录的资产包 |
 | **[dsc-humanize-inner-asset](https://github.com/omds-chat/dsc-humanize-inner-asset)** | dsc-humanize 自带的默认人性化资产合集,每个资产都是一个可安装的包 |
 | **[awesome-dsc-humanize-asset](https://github.com/omds-chat/awesome-dsc-humanize-asset)** | 社区贡献的人性化资产合集,提供索引与收录入口 |
-| **[omds-chat.github.io](https://github.com/omds-chat/omds-chat.github.io)** | 组织站点的在线入口,可由此进入主线的在线页面 |
+| **[dsc-humanize-assistant](https://github.com/omds-chat/dsc-humanize-assistant)** | 官方首个人性化资产包,预设一组人设、标签、策略与注入文本,可直接安装体验 |
 | **[.github](https://github.com/omds-chat/.github)** | 你现在浏览的组织主页,以及权利、署名与免责声明 |
 
 ## 生态与角色
