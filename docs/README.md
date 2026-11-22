@@ -16,6 +16,7 @@
 | [docs/essays/trust-system.md](essays/trust-system.md) | CA-EEC-Sign 信任体系的论证 | 「是什么—为什么—怎么办」:纯前端无后端形态下信任的必要性、X.509/CMS 复用与两层根域、三层清单与作者签名定位的可行性,以及发布可追溯、收录可审计、出事可撤回、用户只面对一个开关的现实意义 | 需要向他人解释或评估签名与信任体系为什么这样设计时 | 用户、贡献者、维护者 |
 | [docs/essays/plugin-ecosystem.md](essays/plugin-ecosystem.md) | 宿主—内部插件—社区插件三层生态的论证 | 「是什么—为什么—怎么办」:三层各自职责、内置所有需求不可能与底线承诺、丰富度与 npm 包名一致,能力/挂载点契约与市场渠道的可行性,上架路径与统一安装体验的现实意义 | 需要向他人解释或评估插件生态为什么分层时 | 用户、贡献者、维护者 |
 | [docs/essays/asset-ecosystem.md](essays/asset-ecosystem.md) | 插件—内部资产—社区资产体系的论证 | 「是什么—为什么—怎么办」:内核与资产的边界、内容生产门槛必须远低于代码、格式 1.0.0 与两合集共用格式与信任域的可行性,安装即导入不覆盖与低门槛贡献的现实意义 | 需要向他人解释或评估资产生态为什么这样组织时 | 用户、贡献者、维护者 |
+| [docs/repo-spec/asset-download-capability.md](repo-spec/asset-download-capability.md) | `assets:download` 能力与「受信来源插件」层级的规范 | 「是什么—为什么—怎么办」:能力语义及与 `assets:read` 的分工、受信来源的认定、清单 `assets` 块字段草案、引擎侧下载与校验与进度取消、插件侧自存与降级,以及边界与未定项 | 设计或改动大体积资产下载、判断某插件能否申请该能力、写清单 `assets` 块时 | 维护者、Agent |
 | [docs/repo-spec/extensibility.md](repo-spec/extensibility.md) | 开发期与运行期两类扩展的划分 | 两类扩展的定义与判定、各仓库逐项归类、容易混的边界、新设计的自检问题 | 设计新能力、判断某物该不该给用户运行期入口、排查"为什么改了没生效"时 | 维护者、Agent |
 | [docs/repo-spec/side-branches.md](repo-spec/side-branches.md) | 旁支分支的职责与命名约定 | 术语、通用规则、四个旁支分支的职责与内容、与主干 `certs/` 的区别、各仓库使用情况、扩展流程 | 新建或改名旁支分支、判断某类内容该放哪个分支、排查流水线读不到某份数据时 | 维护者、Agent |
 | [docs/README.md](README.md) | 本索引 | 文档一览、冲突时的优先级、文档分层、维护约定 | 想找某份文档,或要新增、删除、改名文档时 | 贡献者、维护者、Agent |
@@ -40,7 +41,7 @@
 | 层次 | 面向谁 | 包含文档 | 写作要求 |
 |:---:|:---:|:---:|:---:|
 | 对外文档 | 组织外的用户、插件作者、资产作者与贡献者 | README.md、profile/README.md、profile/README.en-US.md、profile/NOTICE.md、public/certs/README.md | 说明能做什么、从哪里进、边界与免责,不写内部实现细节 |
-| 维护者文档 | 改动工具集与流程的维护者 | tools/Auth-Sign/README.md 中的算法约定、使用限制、常见问题等章节、docs/repo-spec/side-branches.md | 写清取舍理由、失败路径与兼容边界,脚本与流水线改动时同轮更新 |
+| 维护者文档 | 改动工具集与流程的维护者 | tools/Auth-Sign/README.md 中的算法约定、使用限制、常见问题等章节、docs/repo-spec/side-branches.md、docs/repo-spec/asset-download-capability.md | 写清取舍理由、失败路径与兼容边界,脚本与流水线改动时同轮更新 |
 | Agent 执行文档 | 按步骤执行命令的自动化流程或 Agent | tools/Auth-Sign/README.md 中的命令块与占位符约定、本索引的维护约定 | 只依赖可执行的命令与明确占位符,结论以退出码与实际输出为准 |
 
 本仓库的设计论证类文档集中在 docs/essays/(各仓库的技术口径仍以各仓库自身文档为准);目前没有独立的 Agent 专用文档。新增这类文档时,在上表登记并归入对应层次,不要混写进现有文档。
