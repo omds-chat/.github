@@ -10,3 +10,6 @@ secret/
 # Python bytecode
 __pycache__/
 *.pyc
+
+# 本地 npm 模拟器的数据目录
+packages/
